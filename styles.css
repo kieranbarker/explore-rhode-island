@@ -19,12 +19,17 @@ h1::after {
   content: " 🧭";
 }
 
+h2 {
+  margin-top: 0;
+}
+
 p {
   max-width: 30em;
 }
 
 a {
   color: #0277bd;
+  font-style: normal;
 }
 
 a:hover {
@@ -46,9 +51,14 @@ label {
   margin: .5rem;
 }
 
+article {
+  margin: 4em 0;
+}
+
 img {
   display: block;
   max-width: 100%;
+  box-shadow: 0 0 .5rem 0 #757575;
 }
 
 svg {
@@ -62,9 +72,13 @@ button {
   padding: .25rem;
   border: 1px solid #757575;
   border-radius: .25rem;
-  margin: .25rem;
+  margin: 0;
   background-color: #efefef;
   font: inherit;
+}
+
+button + button {
+  margin-left: .5rem;
 }
 
 [data-save][aria-pressed="true"] {
@@ -81,8 +95,9 @@ button {
   fill: #fff;
 }
 
-article {
-  margin: 4em 0;
+.heading {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 40em) {
@@ -93,14 +108,13 @@ article {
     grid-column-gap: 2em;
   }
 
-  h2 {
-    margin-top: 0;
-  }
-
 }
 
-.heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+@media (min-width: 48em) {
+
+  .heading {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
 }
