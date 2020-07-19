@@ -15,8 +15,8 @@ h1, h2 {
   font-family: "Finger Paint", sans-serif;
 }
 
-h1::after {
-  content: " 🧭";
+h1::before {
+  content: "🧭 ";
 }
 
 h2 {
