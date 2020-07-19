@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Explore Rhode Island</title>
+    <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&amp;display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>Explore</h1>
+      <p>Explore cool, quirky places in <a href="https://en.wikipedia.org/wiki/Rhode_Island">Rhode Island</a>.</p>
+      <fieldset id="filters">
+        <legend>Filters</legend>
+        <label>
+          <input type="radio" name="view" value="all" checked>
+          All Places
+        </label>
+        <label>
+          <input type="radio" name="view" value="faves">
+          Favourites
+        </label>
+        <label>
+          <input type="radio" name="view" value="visited">
+          Visited
+        </label>
+        <label>
+          <input type="radio" name="view" value="notVisited">
+          Not Visited
+        </label>
+      </fieldset>
+    </header>
+    <main id="app">
+      <p>
+        <strong>Loading...</strong>
+      </p>
+    </main>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2Cfetch%2CElement.prototype.closest%2CElement.prototype.matches"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reefjs@7/dist/reef.polyfills.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
