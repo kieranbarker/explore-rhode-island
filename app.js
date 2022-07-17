@@ -68,11 +68,11 @@
 
   /**
    * Get the HTML for a single listing
-   * @param   {Object} place The listing data
    * @param   {Object} props The app component data
+   * @param   {Object} place The listing data
    * @returns {String}       An HTML string
    */
-  function createListing (place, props) {
+  function createListing (props, place) {
 
     return (
       "<article>" +
@@ -135,9 +135,7 @@
     }
 
     // Otherwise, show the filtered places
-    return filteredPlaces.map(function (place) {
-      return createListing(place, props);
-    }).join("");
+    return filteredPlaces.map(createListing.bind(null, props)).join("");
 
   }
 
